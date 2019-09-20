@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=.5">
+	<title>Simple Book Search - Google</title>
+    <link href="http://www.tombylicky.com/OtherSites/BookHunt/styles.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="myscript.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+    	<div class="form">
+        	<input type="search" id="search-bar" class="search-bar" onKeyPress="if (event.keyCode==13){bookhunt(); return false;}" placeholder="Search for Books!">
+            <br>Search By:
+            <select id="typeSearch">
+                <option value="">All Parameters</option>
+                <option value="Title">Title</option>
+                <option value="Author">Author</option>
+            </select>
+            <select id="orderSearch">
+                <option value="Relevance">Relevance (default)</option>
+                <option value="Publish Date">Latest to Come Out</option>
+            </select>
+            <br>
+            <input type="button" class="searchbtn" onClick="bookhunt()" value="Search for Books">
+        </div>
+        <div class="result">
+            <div class="list"></div>
+        </div>
+        <div id="pageTurner">
+            <input type="button" class="navibtn" onClick="Prev()" value="<"><input type="button" class="navibtn" onClick="Next()" value=">">
+        </div>
+    </div>
+</body>
+</html>
